@@ -4,7 +4,8 @@ window.onload = function(){
 	
 	 editor = CodeMirror.fromTextArea(document.getElementById("code"), {
         mode: "text/html",
-        lineNumbers: true
+        lineNumbers: true,
+        lineWrapping:true
       });
 	
 	

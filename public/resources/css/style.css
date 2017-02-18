@@ -1,3 +1,9 @@
 #demo_input {
 	display: none;
 }
+
+body > .CodeMirror {
+	margin: auto;
+	border: 1px solid #cccccc;
+	width: 60%;
+}
