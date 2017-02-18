@@ -3,13 +3,34 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css">
+		
 		<link rel="stylesheet" href="/resources/css/style.css">
+		
+		<script src="https://codemirror.net/lib/codemirror.js"></script>
+		<script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+		
 		<script src="/resources/js/client.js"></script>
 	</head>
 	
 	<body>
 		
 		<input id='demo_input' size='100'>
+		
+<textarea id="code" name="code">
+function findSequence(goal) {
+  function find(start, history) {
+    if (start == goal)
+      return history;
+    else if (start > goal)
+      return null;
+    else
+      return find(start + 5, "(" + history + " + 5)") ||
+             find(start * 3, "(" + history + " * 3)");
+  }
+  return find(1, "1");
+}</textarea>
 		
 	</body>
 </html>
