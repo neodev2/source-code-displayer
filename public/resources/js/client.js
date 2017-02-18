@@ -10,16 +10,19 @@ window.onload = function(){
 	
 	
 	
-	var demo_input = document.getElementById('demo_input');
+	var demo_input = document.getElementById('code');
 	
-	var type_this = "<!DOCTYPE HTML><html>Hello, this is kinda the text sup?";
+	var type_this = demo_input.value;
 	var index = 0;
 	
 	window.next_letter = function() {
 		if (index <= type_this.length) {
 			demo_input.value = type_this.substr(0, index++);
-			//editor.replaceRange(type_this.substr(0, index++), CodeMirror.Pos(editor.lastLine()))
-			editor.setValue(demo_input.value)
+			
+			// from http://stackoverflow.com/questions/18946546/how-do-you-append-text-in-codemirror
+			//editor.replaceRange(type_this.substr(0, index++), CodeMirror.Pos(editor.lastLine()));
+			editor.setValue(demo_input.value);
+			
 			setTimeout("next_letter()", 20);
 		}
 	}
