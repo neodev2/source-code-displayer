@@ -15,7 +15,7 @@ window.onload = function(){
 	
 	next_letter();*/
 
-var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+ editor = CodeMirror.fromTextArea(document.getElementById("code"), {
         mode: "text/html",
         lineNumbers: true
       });
